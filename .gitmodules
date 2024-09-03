@@ -1,0 +1,6 @@
+[submodule "fasm2"]
+	path = fasm2
+	url = https://github.com/tgrysztar/fasm2.git
+[submodule "ext/stb"]
+	path = ext/stb
+	url = https://github.com/nothings/stb.git

@@ -1,0 +1,11 @@
+# no change to line endings as default behavior
+* -text
+# *.cmd text eol=crlf
+
+*.asm   linguist-language=Assembly
+*.inc   linguist-language=Assembly
+*.g     linguist-language=Assembly
+*.dll   binary
+*.exe   binary
+*.pdb   binary
+*.ttf   binary
