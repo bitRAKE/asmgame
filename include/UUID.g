@@ -8,6 +8,12 @@
 ;	CATID - category identifier
 
 calminstruction UUID line&
+	match ,line
+	jyes empty
+	match =?,line
+	jyes empty
+	match =< =>,line
+	jyes empty
 	match { A =, B =, C =, D =, { E } }, line, {}
 	jyes cform
 	match { A - B - C - D - E }, line, {}
@@ -15,6 +21,9 @@ calminstruction UUID line&
 	match A - B - C - D - E, line
 	jyes stnd
 bad:	err 'unexpected UUID form'
+	exit
+
+empty:	emit 16
 	exit
 
 stnd:	arrange A, 0x#A

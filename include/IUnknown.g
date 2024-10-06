@@ -50,14 +50,16 @@ define COM
 ;	03020100-0504-0706-0809-0a0b0c0d0e0f
 ;	extrn "{name}"
 ;	...
-;:	interface vtbl offsets for manual use:
-;::	fastcall.params [.irich]
-;::	mov rax, [rcx]
-;::	call [rax + IUnknown__Release]
+; interface vtbl offsets for manual use:
+;	fastcall.params [.irich]
+;	mov rax, [rcx]
+;	call [rax + IUnknown__Release]
 ;
-;:	interface vtbl macros for terse use:
-;::	IUnknown__Release [.irich]
+; interface vtbl macros for terse use:
+;	IUnknown__Release [.irich]
 ;
+
+; :ERROR: if EXTENDS__* is not defined then no error is produced! *refactor*
 
 struc(id) interface? iid,funcs&
 	match ,iid

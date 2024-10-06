@@ -21,9 +21,13 @@ stbi_png.exe : stbi_png.obj $(LIBS)\stb_image.lib
 stbi_png.response : stbi_png.obj
 
 
+# optimized library
+#$(STB)\stb_image.h:
+#	curl -L -o $(STB)\stb_image.h https://raw.githubusercontent.com/nothings/stb/master/stb_image.h
+
 $(LIBS)\stb_image.lib : $(LIBS)\stb_image.c $(STB)\stb_image.h
-	set CL=/O2 /EHs-c- /GL /GS- /sdl- /MT /Zc:inline /favor:AMD64 /arch:AVX2 /nologo
-	cl /TC /c /Fo:stb_image.obj $(LIBS)\stb_image.c
+	set CL=/O2 /EHs-c- /GL /GS- /sdl- /MT /Zc:inline /favor:AMD64 /arch:AVX2
+	cl /nologo /TC /c /Fo:stb_image.obj $(LIBS)\stb_image.c
 	lib /nologo /LTCG /OUT:$(LIBS)\stb_image.lib stb_image.obj
 
 

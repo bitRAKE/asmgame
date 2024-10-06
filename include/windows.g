@@ -14,7 +14,7 @@
 ;	include 'times.inc'
 ;	include 'fix.inc'
 
-include 'codepad.g'
+;include 'codepad.g'
 
 format MS64 COFF
 section ".text$t" code executable readable align 64

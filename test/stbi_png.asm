@@ -198,7 +198,7 @@ END BLOCK
 	cmp r8d, ID_ABOUT
 	jnz .default
 	enter 32, 0
-	MessageBoxA rcx, A "Using GDI to create an immediate type UI.",\
+	MessageBoxA rcx, A "Using stb_image to load window background.",\
 		A "About ...", MB_OK
 	jmp .leave_zero
 
@@ -386,7 +386,7 @@ ID_ABOUT := 100h
 	jnz .peek
 .Fatal:
 	ExitProcess [.msg.wParam]
-
+	jmp $
 
 ;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,;,.-`-.,
 ; We can generate a response file to configure the linker. This is better than

@@ -1,6 +1,5 @@
 ;	cls & ..\fasm2 -e 50 as32bmp.asm
 ;	link @as32bmp.response as32bmp.obj
-;	as32bmp.exe "C:\_daily\asmgame\tools\house.png" "C:\_daily\asmgame\tools\house.bmp"
 
 ; Just a simple tool to convert images using WIC. The default behaviour
 ; is to output 32-bit BMP file, named similar to passed image file name.
