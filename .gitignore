@@ -1,0 +1,15 @@
+# Windows/MSVC/fasm2 build outputs
+*.obj
+*.response
+*.exe
+*.exp
+*.lib
+*.dll
+*.zip
+
+# Local/editor/system files
+*.user
+*.suo
+.vs/
+Thumbs.db
+.DS_Store
